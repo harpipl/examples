@@ -1,4 +1,4 @@
-package pl.harpi.samples.apache.camel.handler;
+package pl.harpi.samples.apache.camel.bean;
 
 import org.apache.camel.Exchange;
 import org.slf4j.Logger;

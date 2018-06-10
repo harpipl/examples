@@ -29,4 +29,16 @@ public class CalculationResource {
 
         return Response.status(Response.Status.OK).entity(response).build();
     }
+
+    @POST
+    @Path("/choice")
+    public Response choice(CalculationRequest request) {
+        ProducerTemplate producer = camelContext.createProducerTemplate();
+        String result = producer.requestBody("direct:choice-rest", request.getRoot(), String.class);
+
+        CalculationResponse response = new CalculationResponse();
+        response.setMessage(result);
+
+        return Response.status(Response.Status.OK).entity(response).build();
+    }
 }
