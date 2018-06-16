@@ -1,5 +1,6 @@
 package pl.harpi.samples.redisson.lock.rest;
 
+import pl.harpi.samples.redisson.lock.service.Message;
 import pl.harpi.samples.redisson.lock.service.RedissonService;
 
 import javax.inject.Inject;
@@ -17,10 +18,12 @@ public class RedissonResource {
     @POST
     @Path("/fetch")
     public Response fetch(RedissonRequest request) {
-        String result = service.fetch(request.getKey(), request.getValue());
+        Message result = service.fetch(request.getKey(), request.getValue());
 
         RedissonResponse response = new RedissonResponse();
-        response.setMessage(result);
+        response.setKey(request.getKey());
+        response.setValue(result.getKey());
+        response.setValue(result.getClientId());
 
         return Response.status(Response.Status.OK).entity(response).build();
     }

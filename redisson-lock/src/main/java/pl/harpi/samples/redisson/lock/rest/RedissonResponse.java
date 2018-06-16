@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class RedissonResponse {
-    private String message;
+    private String key;
+    private String value;
 }
