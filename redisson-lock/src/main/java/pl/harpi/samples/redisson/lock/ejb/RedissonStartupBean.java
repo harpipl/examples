@@ -1,4 +1,4 @@
-package pl.harpi.samples.redisson.lock.service;
+package pl.harpi.samples.redisson.lock.ejb;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
@@ -11,7 +11,7 @@ import javax.ejb.Startup;
 
 @Singleton
 @Startup
-public class RedissonBootStrap {
+public class RedissonStartupBean {
     private RedissonClient redisson;
 
     @PostConstruct
