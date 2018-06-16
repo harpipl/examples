@@ -10,5 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>apache-camel</module>
+        <module>redisson-lock</module>
     </modules>
 </project>
