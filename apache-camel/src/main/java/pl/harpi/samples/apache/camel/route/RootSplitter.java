@@ -6,12 +6,10 @@ import org.slf4j.LoggerFactory;
 import pl.harpi.samples.apache.camel.model.Product;
 import pl.harpi.samples.apache.camel.model.Root;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@ApplicationScoped
 @Named("rootSplitter")
 public class RootSplitter {
     private static final Logger LOGGER = LoggerFactory.getLogger(RootSplitter.class);
