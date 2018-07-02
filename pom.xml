@@ -11,5 +11,6 @@
     <modules>
         <module>apache-camel</module>
         <module>redisson-lock</module>
+        <module>mssql-lock</module>
     </modules>
 </project>
