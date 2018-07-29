@@ -1,6 +1,6 @@
 package pl.harpi.samples.mssql.lock.rest;
 
-import pl.harpi.samples.mssql.lock.ejb.MsSqlServiceBean;
+import pl.harpi.samples.mssql.lock.ejb.BusinessServiceBean;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -15,14 +15,15 @@ import javax.ws.rs.core.Response;
 @Produces(MediaType.APPLICATION_JSON)
 public class MsSqlResource {
     @Inject
-    private MsSqlServiceBean service;
+    private BusinessServiceBean service;
 
     @POST
     @Path("/execute")
     public Response execute(MsSqlRequest request) {
-        Integer result = service.tryLock(request.getResource(), request.getTimeout(), request.getWorkTime(), "public");
-
         MsSqlResponse response = new MsSqlResponse();
+
+        Integer result = service.doSomething(request.getResource(), request.getTimeout(), request.getWorkTime());
+
         response.setResult(result);
 
         return Response.status(Response.Status.OK).entity(response).build();
