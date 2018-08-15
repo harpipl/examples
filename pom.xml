@@ -12,5 +12,6 @@
         <module>apache-camel</module>
         <module>redisson-lock</module>
         <module>mssql-lock</module>
+        <module>java-money</module>
     </modules>
 </project>
