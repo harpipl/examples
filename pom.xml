@@ -8,10 +8,15 @@
     <artifactId>examples</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>apache-camel</module>
         <module>redisson-lock</module>
         <module>mssql-lock</module>
         <module>java-money</module>
+        <module>powermock-usage</module>
+        <module>apache-commons-lang3</module>
+        <module>springframework-spring-context</module>
+        <module>lang-example</module>
     </modules>
 </project>
