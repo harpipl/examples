@@ -18,5 +18,6 @@
         <module>apache-commons-lang3</module>
         <module>springframework-spring-context</module>
         <module>lang-example</module>
+        <module>gson-example</module>
     </modules>
 </project>

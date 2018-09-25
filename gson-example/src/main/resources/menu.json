@@ -1,0 +1,7 @@
+{
+  "name": "Menu1",
+  "items": [
+    {"name": "MenuItem1"},
+    {"name": "MenuItem2"}
+  ]
+}
