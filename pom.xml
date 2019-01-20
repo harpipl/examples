@@ -20,5 +20,6 @@
         <module>lang-example</module>
         <module>gson-example</module>
         <module>apache-commons-codec</module>
+        <module>renjin</module>
     </modules>
 </project>
