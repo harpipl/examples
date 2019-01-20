@@ -19,5 +19,6 @@
         <module>springframework-spring-context</module>
         <module>lang-example</module>
         <module>gson-example</module>
+        <module>apache-commons-codec</module>
     </modules>
 </project>
