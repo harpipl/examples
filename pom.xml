@@ -21,5 +21,7 @@
         <module>gson-example</module>
         <module>apache-commons-codec</module>
         <module>renjin</module>
+        <module>apache-poi</module>
+        <module>apache-spark</module>
     </modules>
 </project>
