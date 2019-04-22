@@ -9,7 +9,7 @@ public class Main {
         SparkSession spark = SparkSession
                 .builder()
                 .appName("Main")
-                .config("spark.master", "local")
+                .master("local")
                 .getOrCreate();
 
         Dataset<Row> df = spark.read().json("apache-spark/src/main/resources/");
