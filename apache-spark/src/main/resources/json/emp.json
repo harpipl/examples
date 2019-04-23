@@ -1,0 +1,23 @@
+[
+  {
+    "empno": 7369,
+    "ename": "SMITH",
+    "job": "CLERK",
+    "sal": 800.0,
+    "deptno": 20
+  },
+  {
+    "empno": 7499,
+    "ename": "ALLEN",
+    "job": "SALESMAN",
+    "sal": 1600.0,
+    "deptno": 30
+  },
+  {
+    "empno": 7521,
+    "ename": "WARD",
+    "job": "SALESMAN",
+    "sal": 1250.0,
+    "deptno": 30
+  }
+]

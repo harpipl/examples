@@ -14,11 +14,23 @@ public class Main {
 
         spark.logInfo(() -> ( "Log info..."));
 
-        Dataset<Row> df = spark.read().json("apache-spark/src/main/resources/");
+        Dataset<Row> dfEmp = spark.read().option("multiLine", true).json("apache-spark/src/main/resources/json/emp.json");
+        Dataset<Row> dfDept = spark.read().option("header", true).csv("apache-spark/src/main/resources/json/dept.csv");
 
-        df.show();
-        df.printSchema();
-        df.select("name").show();
+        dfEmp.createOrReplaceTempView("emp");
+        dfDept.createOrReplaceTempView("dept");
+
+        Dataset<Row> dfJoin1 = dfEmp.join(dfDept, dfEmp.col("deptno").equalTo(dfDept.col("deptno")));
+        dfJoin1.printSchema();
+        dfJoin1.show();
+
+        Dataset<Row> dfJoin2 = spark.sql("select e.*, d.dname, d.loc from emp e join dept d on e.deptno = d.deptno");
+
+        dfJoin2 = dfJoin2.filter(dfJoin2.col("loc").equalTo("CHICAGO"));
+
+        dfJoin2.printSchema();
+        dfJoin2.show();
+
     }
 
 }
