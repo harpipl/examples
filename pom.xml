@@ -23,5 +23,7 @@
         <module>renjin</module>
         <module>apache-poi</module>
         <module>apache-spark</module>
+        <module>eclipse-jgit</module>
+        <module>citrus</module>
     </modules>
 </project>
